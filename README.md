@@ -1,0 +1,1 @@
+# RockStone.Inka.Logging.NLogIntegration
