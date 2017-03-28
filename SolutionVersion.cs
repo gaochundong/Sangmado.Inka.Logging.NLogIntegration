@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyDescription("RockStone.Inka.Logging.NLogIntegration")]
+[assembly: AssemblyDescription("Sangmado.Inka.Logging.NLogIntegration")]
 [assembly: AssemblyCompany("Dennis Gao")]
-[assembly: AssemblyProduct("RockStone.Inka.Logging.NLogIntegration")]
+[assembly: AssemblyProduct("Sangmado.Inka.Logging.NLogIntegration")]
 [assembly: AssemblyCopyright("Copyright © 2015-2017, Dennis Gao, All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyConfiguration("")]

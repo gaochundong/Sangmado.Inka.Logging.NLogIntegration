@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace RockStone.Inka.Logging.NLogIntegration
+namespace Sangmado.Inka.Logging.NLogIntegration
 {
-    public class CompositeLog : RockStone.Inka.Logging.ILog
+    public class CompositeLog : Sangmado.Inka.Logging.ILog
     {
         private readonly Logrila.Logging.ILog _log;
 
@@ -53,7 +53,7 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.Trace(obj, exception);
         }
 
-        public void Trace(RockStone.Inka.Logging.LogOutputProvider messageProvider)
+        public void Trace(Sangmado.Inka.Logging.LogOutputProvider messageProvider)
         {
             _log.Trace(ConvertProvider(messageProvider));
         }
@@ -68,7 +68,7 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.Debug(obj, exception);
         }
 
-        public void Debug(RockStone.Inka.Logging.LogOutputProvider messageProvider)
+        public void Debug(Sangmado.Inka.Logging.LogOutputProvider messageProvider)
         {
             _log.Debug(ConvertProvider(messageProvider));
         }
@@ -83,7 +83,7 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.Info(obj, exception);
         }
 
-        public void Info(RockStone.Inka.Logging.LogOutputProvider messageProvider)
+        public void Info(Sangmado.Inka.Logging.LogOutputProvider messageProvider)
         {
             _log.Info(ConvertProvider(messageProvider));
         }
@@ -98,7 +98,7 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.Warn(obj, exception);
         }
 
-        public void Warn(RockStone.Inka.Logging.LogOutputProvider messageProvider)
+        public void Warn(Sangmado.Inka.Logging.LogOutputProvider messageProvider)
         {
             _log.Warn(ConvertProvider(messageProvider));
         }
@@ -113,7 +113,7 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.Error(obj, exception);
         }
 
-        public void Error(RockStone.Inka.Logging.LogOutputProvider messageProvider)
+        public void Error(Sangmado.Inka.Logging.LogOutputProvider messageProvider)
         {
             _log.Error(ConvertProvider(messageProvider));
         }
@@ -128,7 +128,7 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.Fatal(obj, exception);
         }
 
-        public void Fatal(RockStone.Inka.Logging.LogOutputProvider messageProvider)
+        public void Fatal(Sangmado.Inka.Logging.LogOutputProvider messageProvider)
         {
             _log.Fatal(ConvertProvider(messageProvider));
         }
@@ -193,25 +193,25 @@ namespace RockStone.Inka.Logging.NLogIntegration
             _log.FatalFormat(format, args);
         }
 
-        private Logrila.Logging.LogLevel ConvertLogLevel(RockStone.Inka.Logging.LogLevel level)
+        private Logrila.Logging.LogLevel ConvertLogLevel(Sangmado.Inka.Logging.LogLevel level)
         {
-            if (level == RockStone.Inka.Logging.LogLevel.Fatal)
+            if (level == Sangmado.Inka.Logging.LogLevel.Fatal)
                 return Logrila.Logging.LogLevel.Fatal;
-            else if (level == RockStone.Inka.Logging.LogLevel.Error)
+            else if (level == Sangmado.Inka.Logging.LogLevel.Error)
                 return Logrila.Logging.LogLevel.Error;
-            else if (level == RockStone.Inka.Logging.LogLevel.Warn)
+            else if (level == Sangmado.Inka.Logging.LogLevel.Warn)
                 return Logrila.Logging.LogLevel.Warn;
-            else if (level == RockStone.Inka.Logging.LogLevel.Info)
+            else if (level == Sangmado.Inka.Logging.LogLevel.Info)
                 return Logrila.Logging.LogLevel.Info;
-            else if (level == RockStone.Inka.Logging.LogLevel.Debug)
+            else if (level == Sangmado.Inka.Logging.LogLevel.Debug)
                 return Logrila.Logging.LogLevel.Debug;
-            else if (level == RockStone.Inka.Logging.LogLevel.Trace)
+            else if (level == Sangmado.Inka.Logging.LogLevel.Trace)
                 return Logrila.Logging.LogLevel.Trace;
 
             return Logrila.Logging.LogLevel.None;
         }
 
-        private Logrila.Logging.LogOutputProvider ConvertProvider(RockStone.Inka.Logging.LogOutputProvider provider)
+        private Logrila.Logging.LogOutputProvider ConvertProvider(Sangmado.Inka.Logging.LogOutputProvider provider)
         {
             return () =>
             {

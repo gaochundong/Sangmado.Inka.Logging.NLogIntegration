@@ -1,1 +1,1 @@
-# RockStone.Inka.Logging.NLogIntegration
+# Sangmado.Inka.Logging.NLogIntegration
